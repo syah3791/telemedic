@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Videocall extends CI_Controller {
+class C_videocall extends CI_Controller {
 	public function index()
 	{
-		$this->load->view('video_page.php');
+		$this->load->view('video_call.php');
 	}
 }
