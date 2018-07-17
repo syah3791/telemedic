@@ -1,79 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<style>
-	.jumbotron {
-		background-color: #f4511e; /* Orange */
-    	color: #ffffff;
-    	padding-left: 50px;
-    	padding-right: 50px;
-	}
-	</style>
-	
-	<title>Telemedis</title>
-</head>
+<div class="jumbotron" data-spy="affix">
+  <div class="col-sm-8">
+    <h1>Telemedis</h1>
+    <p>Melayani konsultasi medis ringan secara online dan praktis</p>
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">      
+    </div>
+      <div class="col-sm-3">
+        <div class="container">
+          <div class="list-group-item list-group-item-action active">Online</div> 
+          <div id="online" class="list-group">          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<body>
-	
-	<div class="jumbotron text-center">
-		<form class="form-inline text-right">
-			<div class="input-group">
-				<div class="input-group-btn">
-          <input type="button" class="btn btn-danger" value="Login" onclick="window.location = 'Login.php';"/>
-				</div>
-			</div>
-		</form>
-		<h1>Telemedis</h1>
-		<p>Melayani konsultasi medis ringan secara online dan praktis</p>
-	</div>
-	
-	<div class="container-fluid text-center">
-  	<h2>SERVICES</h2>
-  	<h4>What we offer</h4>
-  	<br>
-  	<div class="row">
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-off"></span>
-      		<h4>POWER</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-heart"></span>
-      		<h4>LOVE</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-lock"></span>
-      		<h4>JOB DONE</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-    	</div>
-    	<br><br>
-  	<div class="row">
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-leaf"></span>
-      		<h4>GREEN</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-certificate"></span>
-      		<h4>CERTIFIED</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-    	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-wrench"></span>
-      		<h4>HARD WORK</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
-    	</div>
-  	</div>
-	</div>
 
-</body>
-</html>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">   
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Call</h4>     
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div id="call">
+            </div>
+            
+          </div>    
+      </div>
+      <div class="modal-footer">
+        <button id="cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>    
+  </div>
+</div>
+ 
+ 

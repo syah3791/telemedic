@@ -1,45 +1,44 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>vchat - a simple video chat app</title>
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-    <!-- Custom CSS -->
-
-    <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
-    
-    <script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
-    <script src="https://simplewebrtc.com/latest-v3.js"></script>
-    <script src="<?php echo base_url('assets/js/videos.js') ?>"></script>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1><a href="/">vchat</a></h1>
-        <h2><a href="/">a simple video chat app</a></h2>
-      </header>
-
-
-      <div id="remotes" class="row">
-        <div class="col-md-6">
-          <div class="videoContainer">
-            <video id="selfVideo" width="500" height="100"></video>
-            <meter id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40"></meter>
+<div class="jumbotron" data-spy="affix">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="remotes" class="bg-light box-shadow" style="width: 100%; height: 100%;">
+          <div class="overlay">
+            <video id="selfVideo" width="20%" height="20%" style="left:0;"></video>
+          </div>               
+        </div>                                
+      </div>
+      <div class="col-sm-3">
+        <div class="container">
+          <div class="list-group-item list-group-item-action active">Online</div> 
+          <div id="online" class="list-group">          
           </div>
         </div>
       </div>
     </div>
-
-    <footer>
-      
-    </footer>
+    <button id="cancel2" class="btn btn-default">Cancel</button>
+  </div> 
+</div>
+  
 
     <script>
+      setInterval(function(){
+        load_unseen_notification();;
+      }, 5000);
       enableVideo();
     </script>
-  </body>
-</html>
+    <style>
+      .overlay {
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:1;
+      }
+      .volume {
+          position: absolute;
+          right: 17%;
+          width: 20%;
+          bottom: 2px;
+          height: 10px;
+      }
+    </style>

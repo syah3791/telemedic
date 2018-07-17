@@ -50,7 +50,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['vc'] = 'c_videocall';
+
 $route['default_controller'] = 'login';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = true;
+$route['register'] = 'login/onClickRegister';
+$route['regis'] = 'login/register';
+$route['login'] = 'login';
+$route['vc'] = 'c_videocall';
+$route['home'] = 'home';
+$route['logout'] = 'login/logout';
+$route['n'] = 'c_notif';
+$route['c/(:any)'] = 'c_notif/call/$1';
+$route['call'] = 'c_notif/check_call';
+$route['r'] = 'c_notif/check_receive';
+$route['receive'] = 'c_notif/receive';
+$route['cancel'] = 'c_notif/cancel';
